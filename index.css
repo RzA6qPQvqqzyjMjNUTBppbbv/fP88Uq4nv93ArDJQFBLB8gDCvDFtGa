@@ -37,7 +37,7 @@ a {
     opacity: 1;
   }
 .div-main{
-  animation: fadein 1s ease 0s 1 normal forwards;
+  
     background-color: rgb(37, 37, 37);
     padding-top: 30px;
     padding-bottom: 30px;
@@ -238,11 +238,12 @@ h2 {
   }
   .menu {
     position: absolute;
-    top: 0;
+    top: 30;
     margin-top: 50px;
     left: 0;
     flex-direction: column;
     width: 100%;
+    transition: .5s;
     justify-content: center;
     align-items: center;
   }
@@ -263,10 +264,11 @@ h2 {
   }
   .menu > li {
     display: flex;
+    animation: fadein 1s ease 0s 1 normal forwards;
     justify-content: center;
     margin: 0;
     padding: 0.5em 0;
-    width: 100%;
+    width: 97%;
     color: white;
     background-color: #222;
   }
@@ -274,6 +276,8 @@ h2 {
     border-bottom: 1px solid #444;
   }
 }
+
+
 @media (max-width: 760px) {
     .stats{
         display: inline;
