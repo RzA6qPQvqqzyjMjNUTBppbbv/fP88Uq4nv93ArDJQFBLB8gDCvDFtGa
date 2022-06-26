@@ -25,7 +25,19 @@ a {
     color: inherit; /* blue colors for links too */
     text-decoration: none; /* no underline */
   }
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 .div-main{
+  animation: fadein 1s ease 0s 1 normal forwards;
     background-color: rgb(37, 37, 37);
     padding-top: 30px;
     padding-bottom: 30px;
@@ -40,10 +52,17 @@ height: 50px;
 border: 2px solid #ffffff;
 border-radius: 8px;
 color: #ffffff;
-animation: buttons 1s ease-in 0s 1 normal forwards;
 font-size: 17px;
 font-family: "Raleway";
 transition: 0.5s;
+}
+.b1 { 
+  animation: fadein 1s ease .2s 1 normal forwards;
+  opacity: 0%;
+}
+.b2{ 
+  animation: fadein 1s ease .4s 1 normal forwards;
+  opacity: 0%;
 }
 .button:hover {
     color: #000000;
@@ -68,12 +87,7 @@ transition: 0.5s;
   .button1:hover {
      opacity: 50%;
   }
-.button .b1 { 
-    opacity: 0%;
-}
-.button .b2 { 
-    opacity: 0%;
-}
+
 
 .stats{
     display: inline-flex;   
@@ -153,6 +167,9 @@ h2 {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+#menulogo{
+  animation: menuanimation 1s ease 0s 1 normal forwards;
 }
 .menu li {
   transition: .2s;
@@ -317,4 +334,26 @@ h2 {
 
 #uptime{
   font-size: 17px;
+}
+
+
+@keyframes menuanimation {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
