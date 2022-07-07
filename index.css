@@ -92,7 +92,7 @@ transition: 0.5s;
 .stats{
     display: inline-flex;   
 }
-.text1{
+h1{
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
     font-size: 80px;
