@@ -1,4 +1,4 @@
-fetch(`https://hunterapi.tk/hubi`).then(res => res.json()).then(async (json) => {
+fetch(`https://hunterapi.tk/api/hubi`).then(res => res.json()).then(async (json) => {
 document.getElementById("users").textContent = `${json.members}`;
 document.getElementById("guilds").textContent = `${json.guilds}`;
 document.getElementById("commands").textContent = `${json.commands}`;
